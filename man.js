@@ -51,7 +51,7 @@ TransportNodeHid.default.isSupported().then(isSupported => {
                             let tx = new Transaction(rawTx).serialize();
                             matrix.sign(0, 0, 0, tx).then(response => {
                                 if (response.return_code === 0x9000) {
-                                    let v = '0x' + response.v.toString('hex');
+                                    let v = '0x' + (parseInt(response.v.toString('hex'), 16) + (rawTx.chainId * 2 + 8)).toString(16);
                                     let r = '0x' + response.r.toString('hex');
                                     let s = '0x' + response.s.toString('hex');
                                     let newTxData = {

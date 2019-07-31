@@ -1,0 +1,226 @@
+
+<html>
+<head>
+    <title>信息公示</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <STYLE type=text/css>
+        TD {
+            FONT-SIZE: 12px;
+            font-style: normal;
+            line-height: 18px;
+        }
+        BODY {
+            FONT-SIZE: 9pt
+        }
+        A:link {
+            COLOR: #000000; TEXT-DECORATION: none
+        }
+        A:visited {
+            COLOR: #000000; TEXT-DECORATION: none
+        }
+        A:active {
+            COLOR: green; TEXT-DECORATION: none
+        }
+        A:hover {
+            COLOR: red; TEXT-DECORATION: underline
+        }
+        BODY {
+            MARGIN-TOP: 0px;
+            MARGIN-LEFT: 0px;
+            MARGIN-RIGHT: 0px;
+            background-image:     url(../../im1g/bgbg.gif);
+        }
+        .td2 {
+            FONT-SIZE: 9pt; LINE-HEIGHT: 16px
+        }
+        A.slv:link {
+            CURSOR: hand; COLOR: #205001; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+        }
+        A.slv:visited {
+            COLOR: #205001; TEXT-DECORATION: none
+        }
+        A.slv:active {
+            COLOR: green; TEXT-DECORATION: none
+        }
+        A.slv:hover {
+            COLOR: red; TEXT-DECORATION: underline
+        }
+        .b12 {font-size: 12px;
+            color: #006666;
+            text-decoration: none;
+        }
+    </STYLE>
+    <style type="text/css">
+        <!--
+        body {
+            background-image:      url();
+        }
+        .style34 {color: #FFFFFF}
+        .style35 {color: #FF6600}
+        .css {	font-size: 12px;
+            color: #FF6600;
+            text-decoration: none;
+        }
+        .style36 {color: #FF0000}
+        .style38 {color: #000000}
+        .style41 {font-size: 10px}
+        -->
+    </style>
+
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- ImageReady Slices (indexxin.psd) -->
+
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="221" valign="top"><table width="221" border="0" cellpadding="0" cellspacing="0" background="make/4.jpg">
+            <tr>
+                <td><img src="make/3.jpg" width="221" height="72"></td>
+            </tr>
+            <tr background="make/4.jpg">
+                <td><table width="152" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="bzjgcx.asp"><img src="../img/lanm_31.gif" width="152" height="24" border="0" /></a></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="chaxun.asp"><img src="../img/lanm_34.gif" width="152" height="24" border="0" /></a></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="qfqychaxun.asp"><img src="../img/lanm_36.gif" width="152" height="24" border="0" /></a></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="xfrgchaxun.asp"><img src="../img/lanm_37.gif" width="152" height="24" border="0" /></a></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="xfqychaxun.asp"><img src="../img/lanm_38.gif" width="152" height="24" border="0" /></a></td>
+                    </tr>
+                </table></td>
+            </tr>
+            <tr>
+                <td><img src="make/5.jpg" width="221" height="11"></td>
+            </tr>
+        </table></td>
+        <td width="630" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td><img src="make/7.jpg" width="630" height="53"></td>
+            </tr>
+            <tr>
+                <td background="make/8.jpg"><form name="formQfqy" method="post" action="http://www.zmdfcxx.com/WebIssue/ExternalServer/Samples/test2.asp?QueryItem=期房签约查询"  target="_blank">
+                    <table width="262" height="128" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td width="82"><div align="center">
+                                <input type=hidden value=Contractno name=FieldName>
+                                <input type=hidden value="=" name=FieldExp>
+                                签约合同号： </div></td>
+                            <td width="180">
+                                <div align="left">
+                                    <input name="FieldValue" type="text" value="驻">
+                                </div></td>
+                        </tr>
+                        <tr>
+                            <td><div align="center">
+                                <input type=hidden value=Password name=FieldName>
+                                <input type=hidden value="=" name=FieldExp>
+                                密　　码：</div></td>
+                            <td>
+                                <div align="left">
+                                    <input type="password" name="FieldValue">
+                                </div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><div align="center">
+                                <input type="button" onclick=dosubmit() name="Submit" value="查询">
+                                　
+                                <input type="reset" name="Submit" value="重置">
+                            </div></td>
+                        </tr>
+                    </table>
+                    <script language=javascript>
+                        function dosubmit(){
+                            var f = document.all("formQfqy");
+                            var item=f.FieldValue;
+
+                            if (item[1].value==""  || item[1].value==""){
+                                alert("签约合同号和密码都不能为空!!")
+                                return;
+                            }
+                            formQfqy.submit();
+                        }
+
+                    </script>
+                </form></td>
+            </tr>
+            <tr>
+                <td><img src="make/9.jpg" width="630" height="72"></td>
+            </tr>
+            <tr>
+                <td><table width="536" height="143" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td><img src="../img/xxzs_47.jpg" alt="" width="103" height="131" border="0" usemap="#MapMap"></td>
+                        <td><img src="../img/xxzs_48.jpg" alt="" width="105" height="131" border="0" usemap="#Map2Map"></td>
+                        <td><img src="../img/xxzs_49.jpg" alt="" width="113" height="131" border="0" usemap="#Map3Map"></td>
+                        <td><img src="../img/xxzs_50.jpg" alt="" width="104" height="131" border="0" usemap="#Map4Map"></td>
+                        <td><img src="../img/xxzs_51.jpg" alt="" width="111" height="131" border="0" usemap="#Map5Map"></td>
+                    </tr>
+                </table>
+                    <map name="MapMap">
+                        <area shape="rect" coords="2,0,104,130" href="bzjgcx.asp">
+                    </map>
+                    <map name="Map2Map">
+                        <area shape="rect" coords="2,1,104,131" href="chaxun.asp">
+                    </map>
+                    <map name="Map3Map">
+                        <area shape="rect" coords="1,2,113,128" href="qfqychaxun.asp">
+                    </map>
+                    <map name="Map4Map">
+                        <area shape="rect" coords="2,2,102,129" href="xfrgchaxun.asp">
+                    </map>
+                    <map name="Map5Map">
+                        <area shape="rect" coords="4,1,108,128" href="qfqychaxun.asp">
+                    </map></td>
+            </tr>
+        </table></td>
+    </tr>
+</table>
+<table width="850" height="72" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="102" height="81" background="../img/indexxin_40.jpg">&nbsp;</td>
+        <td width="645" background="../img/indexxin_40.jpg"><div align="center">
+            <DIV>
+                <DIV><br>
+                    <a href="http://www.zmdfcxx.com" target="_blank">驻马店房产信息网</a> 版权所有 信息产业部ICP备案号：豫ICP备11007414号-1</DIV>
+            </DIV>
+            <DIV>主办单位：驻马店市住房管理中心 技术支持：驻马店市科信网络科技有限公司 </DIV>
+            <DIV>业务联系电话：0396-2981199 <A href="mailto:举报邮箱：zmdfcxx@163.com">举报邮箱：zmdfcxx@163.com   QQ群（开发企业）：190382072</A>
+                <p>&nbsp;</p>
+            </DIV>
+        </div></td>
+        <td width="103">&nbsp;</td>
+    </tr>
+</table>
+<!-- End ImageReady Slices -->
+
+
+
+
+
+</body>
+</html>

@@ -23,12 +23,12 @@ var rawTx = {
     value: '0x00',
     data: '',
     chainId: 3,
+    TxEnterType: '',
+    IsEntrustTx: '',
     v: '0x3',
-    r: '0x00',
-    s: '0x00',
-    TxEnterType: 0,
-    IsEntrustTx: 0,
-    CommitTime: 1564109708687,
+    r: '0x',
+    s: '0x',
+    CommitTime: 1564552436000,
     extra_to: [[0, 0 , []]],
 }
 
@@ -39,12 +39,6 @@ TransportNodeHid.default.isSupported().then(isSupported => {
                 TransportNodeHid.default.create().then(transport => {
                     transport.setDebugMode(false);
                     const matrix = new MatrixAIApp(transport);
-
-                    // now it is possible to access all commands in the app
-                    // const eth = new Eth(transport);
-                    // eth.getAddress("m/44'/60'/0'/0/0").then(addr => {
-                    //    console.log('eth', addr);
-                    // });
                     matrix.getAddress(0, 0, 0, false).then(addr => {
                         aiman.man.getTransactionCount(addr.address, (err, nonce) => {
                             rawTx.nonce = web3.utils.toHex(nonce);
@@ -66,8 +60,8 @@ TransportNodeHid.default.isSupported().then(isSupported => {
                                         currency: 'MAN',
                                         txType: rawTx.extra_to[0][0],
                                         lockHeight: rawTx.extra_to[0][1],
-                                        isEntrustTx: rawTx.IsEntrustTx,
-                                        txEnterType: rawTx.TxEnterType,
+                                        isEntrustTx: 0,
+                                        txEnterType: 0,
                                         commitTime: rawTx.CommitTime,
                                         extra_to: rawTx.extra_to[0][2]
                                     };
@@ -86,4 +80,10 @@ TransportNodeHid.default.isSupported().then(isSupported => {
 
     }
 });
+
+
+
+
+
+
 

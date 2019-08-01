@@ -14,7 +14,7 @@
     "aiman": "0.0.15",
     "bignumber.js": "^9.0.0",
     "ethereumjs-tx": "^1.3.7",
-    "ledger-matrix": "^1.1.2",
+    "ledger-matrix": "^1.1.3",
     "matrixjs-tx": "^1.0.2",
     "matrixjs-util": "^1.0.3",
     "web3": "^1.0.0-beta.55"

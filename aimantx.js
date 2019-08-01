@@ -17,12 +17,14 @@ var rawTx = {
     TxEnterType: '0x',
     IsEntrustTx: '0x',
     CommitTime: 1564545105,
-    extra_to: [[0, 0 , []]],
+    extra_to: [[0, 0 , [['MAN.2WeBpo7BxfUxVmryJrqLSAKwxMW2U', '0x2c68af0bb140000', '0x'], ['MAN.2izwMiCSYWjTKfazv1qUaoQzDFJPG', '0x2c68af0bb140000', '0x']]]],
 };
-aiman.man.getTransactionCount('MAN.5xYzBHrJfXeJi9yQ8Qq8hvm19bU4', (err, nonce) => {
+
+aiman.man.getTransactionCount('MAN.Xfstsxn5x6TPGHtVJFvbBNbs7r6A', (err, nonce) => {
     rawTx.nonce = aiman.toHex(nonce);
     let tx = new Transaction(rawTx, true);
-    let privateKey = Buffer.from('3ec3678077a79400081e525f516d722bce7d19f80b7288d0992c84c2481c5faa', 'hex')
+    console.log(tx.serialize().toString('hex'));
+    let privateKey = Buffer.from('246ee75c7e5e22ab8af51dd5c0cd6b8c17e0bab7b69f18d989b01d33bc72450d', 'hex')
     tx.sign(privateKey);
     let serializedTx = tx.serialize();
     let txData = tx.getTxParams(serializedTx);

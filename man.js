@@ -21,16 +21,16 @@ var rawTx = {
     gasLimit: '0x033450',
     to: 'MAN.5xYzBHrJfXeJi9yQ8Qq8hvm19bU4',
     value: '0x00',
-    data: '',
+    data: '0x',
     chainId: 3,
-    TxEnterType: '',
-    IsEntrustTx: '',
     v: '0x3',
     r: '0x',
     s: '0x',
-    CommitTime: 1564552436000,
-    extra_to: [[0, 0 , []]],
-}
+    TxEnterType: '0x',
+    IsEntrustTx: '0x',
+    CommitTime: 1564545105,
+    extra_to: [[0, 0 , [['MAN.2WeBpo7BxfUxVmryJrqLSAKwxMW2U', '0x2c68af0bb140000', '0x'], ['MAN.2izwMiCSYWjTKfazv1qUaoQzDFJPG', '0x2c68af0bb140000', '0x']]]],
+};
 
 TransportNodeHid.default.isSupported().then(isSupported => {
     if (isSupported) {
@@ -43,6 +43,7 @@ TransportNodeHid.default.isSupported().then(isSupported => {
                         aiman.man.getTransactionCount(addr.address, (err, nonce) => {
                             rawTx.nonce = web3.utils.toHex(nonce);
                             let tx = new Transaction(rawTx).serialize();
+                            console.log(tx.toString('hex'));
                             matrix.sign(0, 0, 0, tx).then(response => {
                                 if (response.return_code === 0x9000) {
                                     let v = '0x' + (parseInt(response.v.toString('hex'), 16) + (rawTx.chainId * 2 + 8)).toString(16);
@@ -52,6 +53,7 @@ TransportNodeHid.default.isSupported().then(isSupported => {
                                         v: v,
                                         r: r,
                                         s: s,
+                                        to: rawTx.to,
                                         data: rawTx.data,
                                         gasPrice: rawTx.gasPrice,
                                         gas: rawTx.gasLimit,
@@ -66,7 +68,7 @@ TransportNodeHid.default.isSupported().then(isSupported => {
                                         extra_to: rawTx.extra_to[0][2]
                                     };
                                     console.log(newTxData);
-                                    aiman.man.sendRawTransaction(newTxData).then((err, data) => {
+                                    aiman.man.sendRawTransaction(newTxData, (err, data) => {
                                         console.log(err);
                                         console.log(data);
                                     });
